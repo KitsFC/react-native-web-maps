@@ -111,7 +111,7 @@ See the [storybook](https://react-native-web-community.github.io/react-native-we
 
 Using this fork, an array of markers:
 
-```
+``` javascript
 <MapView
   onRef={ref => { this.map = ref; }} //for web
   ref={ref => { this.map = ref; }} //for native

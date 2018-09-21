@@ -57,7 +57,7 @@ import MapView from 'react-native-maps';
 ```
 See the original [documentation](https://github.com/airbnb/react-native-maps).
 
-If you are using [react-native-web-community/react-native-web-maps](https://github.com/react-community/react-native-maps) and/or [Expo](https://docs.expo.io/versions/latest/sdk/map-view) for iOS and Android:
+If you are using [react-community/react-native-maps](https://github.com/react-community/react-native-maps) and/or [Expo](https://docs.expo.io/versions/latest/sdk/map-view) for iOS and Android:
 
 ``` javascript
 // webpack.config.js

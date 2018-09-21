@@ -76,6 +76,7 @@ module.exports = {
 ...
 
 // Import statements example
+import { Platform, View } from "react-native";
 import expo from 'expo';
 import reactNativeMaps from 'react-native-maps'
 const MapView = Platform.OS === 'web' ? reactNativeMaps : expo.MapView;

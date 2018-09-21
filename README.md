@@ -2,18 +2,30 @@
 > React Native for Web implementation of react-native-maps
 
 ## Version
-0.1.1
+> 0.1.1
 
 ## Notes about this fork
 - Adds onRef prop so that the DOM element generated from the `MapView` component can be referenced.
 - Modifies other `MapView` and `MapView.Marker` props and events (see below).
 
 ## Getting started
-`$ npm install react-native-web-maps --save`
+```
+npm install https://github.com/KitsFC/react-native-web-maps --save
+```
+or
+```
+yarn add https://github.com/KitsFC/react-native-web-maps
+```
 
 To implement `react-native-web-maps` we're using the `react-google-maps` package:
 
-`$ npm install react-google-maps --save`
+```
+npm install react-google-maps --save
+```
+or
+```
+yarn add react-google-maps
+```
 
 Include and alias the package in your webpack config:
 
@@ -44,6 +56,30 @@ Then, you should add this script to your index.html:
 import MapView from 'react-native-maps';
 ```
 See the original [documentation](https://github.com/airbnb/react-native-maps).
+
+If you are using [react-native-web-community/react-native-web-maps](https://github.com/react-community/react-native-maps) and/or [Expo](https://docs.expo.io/versions/latest/sdk/map-view) for iOS and Android:
+
+``` javascript
+// webpack.config.js
+...
+module.exports = {
+  resolve: {
+    alias: {
+      ...
+      '@expo/vector-icons': 'expo-web',
+      expo: 'expo-web',
+      'react-native-maps': 'react-native-web-maps',
+      ...
+    },
+  },
+}
+...
+
+// Import statements example
+import expo from 'expo';
+import reactNativeMaps from 'react-native-maps'
+const MapView = Platform.OS === 'web' ? reactNativeMaps : expo.MapView;
+```
 
 The supported components are `MapView` and `MapView.Marker`.
 

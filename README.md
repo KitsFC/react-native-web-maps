@@ -1,7 +1,10 @@
 # react-native-web-maps
 > React Native for Web implementation of react-native-maps
 
-# Notes about this fork
+## Version
+0.1.1
+
+## Notes about this fork
 - Adds onRef prop so that the DOM element generated from the `MapView` component can be referenced.
 - Modifies other `MapView` and `MapView.Marker` props and events (see below).
 
